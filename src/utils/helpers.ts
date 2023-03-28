@@ -3,26 +3,17 @@ import {
   Delegate,
   Proposal,
   Governance,
-  Vote
+  Vote,
 } from "../../generated/schema";
-import {
-  Address,
-  EthereumEvent,
-  BigInt,
-  Bytes,
-  log
-} from "@graphprotocol/graph-ts";
-import { DEFAULT_DECIMALS, toDecimal } from "./decimals";
 import {
   ZERO_ADDRESS,
   BIGINT_ZERO,
   BIGINT_ONE,
-  BIGINT_FIVE,
-  BIGDECIMAL_ZERO
+  BIGDECIMAL_ZERO,
 } from "./constants";
 
 export function getOrCreateTokenHolder(
-  id: String,
+  id: string,
   createIfNotFound: boolean = true,
   save: boolean = true
 ): TokenHolder {
@@ -50,7 +41,7 @@ export function getOrCreateTokenHolder(
 }
 
 export function getOrCreateDelegate(
-  id: String,
+  id: string,
   createIfNotFound: boolean = true,
   save: boolean = true
 ): Delegate {
@@ -78,7 +69,7 @@ export function getOrCreateDelegate(
 }
 
 export function getOrCreateVote(
-  id: String,
+  id: string,
   createIfNotFound: boolean = true,
   save: boolean = false
 ): Vote {
@@ -96,7 +87,7 @@ export function getOrCreateVote(
 }
 
 export function getOrCreateProposal(
-  id: String,
+  id: string,
   createIfNotFound: boolean = true,
   save: boolean = false
 ): Proposal {
